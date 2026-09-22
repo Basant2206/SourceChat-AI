@@ -33,6 +33,11 @@ graph.add_edge("Query_rewriter", "Output_generator")
 graph.add_edge("Output_generator", END)
 
 app = graph.compile()
+
+png_bytes = app.get_graph().draw_mermaid_png()
+with open("langgraph_dag.png", "wb") as f:
+    f.write(png_bytes)
+
 state = {"messages":["Tell me about llama"]}
 
 output = app.invoke(state)
