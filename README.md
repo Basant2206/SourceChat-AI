@@ -10,4 +10,8 @@ This project uses LangGraph to orchestrate the RAG workflow.
 4. **Query Rewriter** — Rewrites the query when retrieved documents are not relevant.
 5. **Output Generator** — Generates the final response using the relevant context.
 
-![LangGraph DAG](images/langgraph_dag.png)
+<p align="center">
+  <img src="./langgraph_dag.png" alt="LangGraph DAG" width="800">
+</p>
+
+![LangGraph DAG](./langgraph_dag.png)
